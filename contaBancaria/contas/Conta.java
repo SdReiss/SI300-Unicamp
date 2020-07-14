@@ -9,6 +9,7 @@ public class Conta{
 	public Conta(int numeroConta, String nomeCliente) {
 		this.setNumeroConta(numeroConta);
 		this.setNomeCliente(nomeCliente);
+		this.setSaldo(0);
 	}
 	
 	
@@ -49,8 +50,8 @@ public class Conta{
 		this.saldo = saldo;
 	}
 	
-	public String getNumeroConta() {
-		return Integer.toString(numeroConta);
+	public int getNumeroConta() {
+		return this.numeroConta;
 	}
 	
 	public String getNomeCliente() {
@@ -59,6 +60,11 @@ public class Conta{
 	
 	public Float getSaldo() {
 		return this.saldo;
+	}
+	
+	@Override
+	public String toString() {
+		return "Nome: " + getNomeCliente() + "\nNumero da conta: " + getNumeroConta() + "\nSaldo: " + getSaldo() + "";
 	}
 	
 }
