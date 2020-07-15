@@ -30,6 +30,7 @@ public class Conta{
 	public boolean transferePara(Conta contaDestino, float valor) {
 		if(valor<saldo){
 			this.setSaldo(this.getSaldo()-valor);
+			contaDestino.setSaldo(contaDestino.getSaldo()+valor);
 			return true;
 		} else {
 			return false;
